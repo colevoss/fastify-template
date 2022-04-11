@@ -1,0 +1,6 @@
+Logger:
+  Level: debug
+  Pretty: false
+
+Roadtrip:
+  Env: development
