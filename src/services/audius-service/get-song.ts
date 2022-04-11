@@ -20,5 +20,7 @@ app.get<{
   // Fetches song from audius provider...
   const song = await app.db.getSong(id);
 
+  request.log.info({ songId: id, song }, 'Fetched: Audius song');
+
   return song;
 });
