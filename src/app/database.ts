@@ -1,4 +1,4 @@
-import { HttpErrors } from '../app';
+import { HttpErrors } from '.';
 
 // Mock database to illustrate how we would create a DB instance on the App instance
 export class Database {

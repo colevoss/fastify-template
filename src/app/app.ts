@@ -6,7 +6,7 @@ import fastify, {
 } from 'fastify';
 import fp from 'fastify-plugin';
 import cors from 'fastify-cors';
-import { Database } from '../services/database';
+import { Database } from './database';
 import { HttpError, HttpErrors } from './errors';
 
 const loggerOptions: FastifyLoggerOptions = {
