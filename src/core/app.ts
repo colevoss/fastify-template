@@ -13,9 +13,9 @@ let reqId = 1;
 
 export const app = fastify({
   logger: loggerOptions,
-  // Pulls the `custom-request-id` header for the tracing request id
-  // TODO: Update for Google Logging
-  // requestIdHeader: 'request-id',
+  /**
+   * @see logging.googleapis.com/spanId at https://cloud.google.com/logging/docs/structured-logging
+   */
   genReqId(req) {
     let cloudTrace = req.headers['x-cloud-trace-context'];
 
@@ -31,7 +31,6 @@ export const app = fastify({
 
     return `projects/${process.env.GOOGLE_CLOUD_PROJECT}/traces/${trace}`;
   },
-  // Sets the request id to this key in the logs.
   requestIdLogLabel: config.get<string>('Logger.RequestIdLogLabel'),
 });
 
