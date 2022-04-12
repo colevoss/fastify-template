@@ -1,7 +1,7 @@
-import { app } from './app';
+import { app } from './core';
 
 // Importing this service will automatically register the routes on the `app`
-import './services/audius-service';
+import './services';
 
 const PORT = process.env.PORT || 8080;
 

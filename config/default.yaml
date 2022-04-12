@@ -1,6 +1,8 @@
 Logger:
   Level: debug
   Pretty: false
+  RequestIdHeader:
+  RequestIdLogLabel: logging.googleapis.com/trace
 
 Roadtrip:
   Env: development

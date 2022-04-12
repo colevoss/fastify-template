@@ -1,4 +1,4 @@
-import { HttpErrors } from '.';
+import { HttpErrors } from '../errors';
 
 // Mock database to illustrate how we would create a DB instance on the App instance
 export class Database {
@@ -12,5 +12,9 @@ export class Database {
       name: 'The Best Song',
       playCount: 3000,
     };
+  }
+
+  public async close() {
+    console.log('CLOSING DATABSE!');
   }
 }
